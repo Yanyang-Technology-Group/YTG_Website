@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { ArrowDown, ArrowUpRight, CodeXml, Globe2, Layers, MessagesSquare, Sparkles, TrainFront } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, CodeXml, Globe2, Layers, MessagesSquare, ShieldCheck, TrainFront } from 'lucide-react';
 import { categories, disclosure, repositories } from '../data/repositories';
 import { HeroArtwork } from '../components/Artwork';
 import ExternalLink from '../components/ExternalLink';
@@ -20,7 +20,7 @@ export default function Home() {
           <h1 id="hero-title">晏阳技术组<span className="hero-english-title">Yanyang Technology Group</span></h1>
           <p className="hero-description">社区应用、Web 站点与 Minecraft 项目。<br />查看功能说明、技术栈与源码。</p>
           <div className="hero-actions"><a className="btn btn-primary primary-button" href="#projects">浏览项目<ArrowDown size={17} aria-hidden="true" /></a><a className="btn btn-ghost secondary-button" href="#about">组织介绍<ArrowUpRight size={17} aria-hidden="true" /></a></div>
-          <p className="badge disclosure-badge"><Sparkles size={13} aria-hidden="true" /><span>{disclosure}</span></p>
+          <p className="badge disclosure-badge"><ShieldCheck size={13} aria-hidden="true" /><span>{disclosure}</span></p>
         </Reveal>
         <Reveal className="hero-visual" delay={0.08}><HeroArtwork /></Reveal>
         <div className="hero-bottom-note"><span>YANYANG TECHNOLOGY GROUP</span><span>项目代码 · 文档 · 平台入口<ArrowDown size={12} aria-hidden="true" /></span></div>

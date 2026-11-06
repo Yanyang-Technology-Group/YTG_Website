@@ -1,4 +1,4 @@
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { disclosure } from '../data/repositories';
 import ExternalLink from './ExternalLink';
@@ -45,7 +45,7 @@ export default function Layout({ children }) {
           </div>
           <div className="footer-bottom">
             <p>© 2025-2026 晏阳技术组 <span className="footer-english">Yanyang Technology Group</span><span className="footer-version">v{__APP_VERSION__}</span></p>
-            <p className="footer-disclosure"><Sparkles size={13} aria-hidden="true" />{disclosure}</p>
+            <p className="footer-disclosure"><ShieldCheck size={13} aria-hidden="true" />{disclosure}</p>
           </div>
         </div>
       </footer>

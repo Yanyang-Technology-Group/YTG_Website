@@ -34,7 +34,7 @@ npm run preview
 
 - 主色为 `#0062ff`。导航栏提供浅色、深色、跟随系统三个选项，手动偏好保存在 `localStorage`；首次访问默认跟随系统，并在渲染前应用主题以减少闪烁。
 - 首页显著位置与全站页脚均提供 GitHub、Gitee、Gitea、Modrinth、MCMod 链接，所有外链以 `target="_blank" rel="noopener noreferrer"` 打开。
-- Hero 与页脚均展示指定文案：本项目开源，并使用 GPT-3.0 提供支持。
+- Hero 与页脚均展示开源声明：本项目开源，采用 GPLv3 许可证。
 - 项目卡片桌面端三列（首张跨两列）、中等屏幕两列、移动端单列；平台入口可换行。
 - Framer Motion 实现一次性入场、页面转场与筛选布局动画，卡片和链接提供轻微交互反馈；尊重系统减少动态效果偏好。
 - 具备语义化页面结构、键盘焦点、跳过导航链接及主题按钮可访问名称。
@@ -117,4 +117,4 @@ Vite 会原样复制到 `dist/_redirects`。Cloudflare Pages 用该规则将 SPA
 
 ## 许可证
 
-本介绍网站源码采用 [MIT License](LICENSE)。被介绍项目保留各自的许可证；Manrope 字体使用 OFL-1.1，其许可证随字体依赖包提供。指定的 GPT-3.0 文案是页面声明，本网站作为静态 SPA 运行，不会调用 GPT 或其他生成式 API。
+本介绍网站源码采用 [GNU GPLv3](LICENSE) 许可证（SPDX：`GPL-3.0-only`）。被介绍项目保留各自的许可证；Manrope 字体使用 OFL-1.1，其许可证随字体依赖包提供。

@@ -6,7 +6,7 @@ export const platforms = [
   { name: 'MCMod', label: 'MC百科', icon: 'mcmod', href: 'https://www.mcmod.cn/author/42845.html', description: '中文模组百科' },
 ];
 
-export const disclosure = '本项目开源，并使用 GPT-3.0 提供支持';
+export const disclosure = '本项目开源，采用 GPLv3 许可证';
 export const verifiedOn = '2026-11-06';
 
 export const categories = [

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "description": "晏阳技术组的开源项目与多平台入口展示网站",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "engines": {
     "node": ">=22.12.0"
   },
