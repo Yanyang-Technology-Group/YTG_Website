@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { getRepository, repositories, verifiedOn } from '../data/repositories';
 import { ProjectArtwork } from '../components/Artwork';
 import ExternalLink from '../components/ExternalLink';
-import { GitHubIcon, ProjectIcon } from '../components/Icons';
+import { GitHubIcon, PlatformIcon, ProjectIcon } from '../components/Icons';
 import Reveal from '../components/Reveal';
 import NotFound from './NotFound';
 
@@ -16,7 +16,7 @@ export default function RepositoryDetail() {
   return (
     <main id="main-content" className="detail-page site-container" tabIndex={-1}>
       <Link to="/#projects" className="back-link"><ArrowLeft size={16} aria-hidden="true" />返回全部项目</Link>
-      <Reveal className="detail-hero"><div className="detail-hero-copy"><p className="eyebrow"><span className="section-number">OPEN SOURCE /</span>{repository.categoryLabel}</p><span className="detail-project-icon"><ProjectIcon name={repository.icon} size={30} /></span><h1>{repository.name}</h1><p className="detail-tagline">{repository.tagline}</p><p className="detail-summary">{repository.summary}</p><div className="detail-actions"><ExternalLink href={repository.github} className="btn btn-primary primary-button"><GitHubIcon size={18} />查看 GitHub 仓库<ArrowUpRight size={16} aria-hidden="true" /></ExternalLink>{repository.mcmod && <ExternalLink href={repository.mcmod} className="btn secondary-button"><BookOpen size={17} />在 MC百科查看<ArrowUpRight size={15} aria-hidden="true" /></ExternalLink>}</div><div className="detail-meta"><span><FileCode2 size={14} aria-hidden="true" />{repository.language}</span><span><ShieldCheck size={14} aria-hidden="true" />{repository.license}</span></div></div><ProjectArtwork type={repository.artwork} large /></Reveal>
+      <Reveal className="detail-hero"><div className="detail-hero-copy"><p className="eyebrow"><span className="section-number">OPEN SOURCE /</span>{repository.categoryLabel}</p><span className="detail-project-icon"><ProjectIcon name={repository.icon} size={30} /></span><h1>{repository.name}</h1><p className="detail-tagline">{repository.tagline}</p><p className="detail-summary">{repository.summary}</p><div className="detail-actions"><ExternalLink href={repository.github} className="btn btn-primary primary-button"><GitHubIcon size={18} />GitHub<ArrowUpRight size={16} aria-hidden="true" /></ExternalLink><ExternalLink href={repository.gitee} className="btn secondary-button">Gitee<ArrowUpRight size={15} aria-hidden="true" /></ExternalLink><ExternalLink href={repository.gitea} className="btn secondary-button">Gitea<ArrowUpRight size={15} aria-hidden="true" /></ExternalLink></div>{repository.publishingPlatforms && <div className="publishing-platforms"><span className="publishing-platforms-label">下载与发布</span>{repository.publishingPlatforms.map((platform) => <ExternalLink key={platform.name} href={platform.href} className="publishing-platform-link"><PlatformIcon name={platform.icon} size={15} />{platform.name}<ArrowUpRight size={12} aria-hidden="true" /></ExternalLink>)}</div>}<div className="detail-meta"><span><FileCode2 size={14} aria-hidden="true" />{repository.language}</span><span><ShieldCheck size={14} aria-hidden="true" />{repository.license}</span></div></div><ProjectArtwork type={repository.artwork} large /></Reveal>
 
       <Reveal className="problem-panel"><span className="problem-icon"><Layers size={22} strokeWidth={1.5} aria-hidden="true" /></span><div><p className="eyebrow">WHY IT EXISTS</p><h2>解决的问题</h2><p>{repository.problem}</p></div></Reveal>
 

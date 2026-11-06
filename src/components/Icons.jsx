@@ -1,13 +1,7 @@
 import { BookOpen, Box, Braces, GitFork, Globe2, MessagesSquare, Palette, Smartphone, TrainFront } from 'lucide-react';
 
 export function BrandMark({ className = '' }) {
-  return (
-    <svg className={className} width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <rect width="40" height="40" rx="11" fill="#0062ff" />
-      <path d="m10 11 10 10 10-10M20 21v10" stroke="white" strokeWidth="5" />
-      <path d="M10 29h5" stroke="#a5c7ff" strokeWidth="3" />
-    </svg>
-  );
+  return <img className={className} src="/images/icon.webp" alt="" aria-hidden="true" />;
 }
 
 export function GitHubIcon({ size = 20, ...props }) {

@@ -2,15 +2,15 @@ import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { disclosure } from '../data/repositories';
 import ExternalLink from './ExternalLink';
-import { BrandMark, GitHubIcon } from './Icons';
+import { GitHubIcon } from './Icons';
 import PlatformLinks from './PlatformLinks';
 import ThemeSwitch from './ThemeSwitch';
 
 function Brand({ footer = false }) {
   return (
     <Link to="/" className={`brand ${footer ? 'brand--footer' : ''}`} aria-label="晏阳技术组首页">
-      <BrandMark />
-      <span><strong>晏阳技术组</strong><small>YANYANG TECHNOLOGY GROUP</small></span>
+      <img className="brand-logo brand-logo--light" src="/images/logo_dark.webp" alt="晏阳技术组 Yanyang Technology Group" />
+      <img className="brand-logo brand-logo--dark" src="/images/logo_light.webp" alt="" aria-hidden="true" />
     </Link>
   );
 }
@@ -44,7 +44,7 @@ export default function Layout({ children }) {
             <div className="footer-platforms"><span className="eyebrow">平台入口 / PLATFORMS</span><PlatformLinks variant="footer" /></div>
           </div>
           <div className="footer-bottom">
-            <p>© {new Date().getFullYear()} 晏阳技术组 <span className="footer-english">Yanyang Technology Group</span></p>
+            <p>© 2025-2026 晏阳技术组 <span className="footer-english">Yanyang Technology Group</span><span className="footer-version">v{__APP_VERSION__}</span></p>
             <p className="footer-disclosure"><Sparkles size={13} aria-hidden="true" />{disclosure}</p>
           </div>
         </div>
