@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="ytg-light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f7f9fc" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="晏阳技术组 Yanyang Technology Group：创新为骨，代码为韵。探索社区平台、跨平台客户端与 Minecraft 开源项目。" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>晏阳技术组 · Yanyang Technology Group</title>
+    <script>
+      // Apply the saved preference before React mounts to avoid a theme flash.
+      try {
+        var preference = localStorage.getItem('ytg-theme');
+        var dark = preference === 'dark' || (preference !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.dataset.theme = dark ? 'ytg-dark' : 'ytg-light';
+        document.querySelector('meta[name="theme-color"]').content = dark ? '#0b101b' : '#f7f9fc';
+      } catch (_) {
+        document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'ytg-dark' : 'ytg-light';
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
